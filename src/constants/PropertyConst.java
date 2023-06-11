@@ -1,7 +1,7 @@
 package constants;
 
 public enum PropertyConst {
-  //ペッパー文字列
+
     PEPPER("pepper");
 
     private final String text;

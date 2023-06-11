@@ -15,7 +15,7 @@ public enum MessageConst {
     E_NONAME("氏名を入力してください。"),
     E_NOPASSWORD("パスワードを入力してください。"),
     E_NOU_CODE("ユーザーIDを入力してください。"),
-    E_U_CODE_EXIST("入力されたユーザーIDの情報は既に存在しています。"),
+    E_U_CODE_EXIST("入力されたユーザーIDは既に存在しています。"),
     E_NOTITLE("タイトルを入力してください。"),
     E_NOIMAGE("画像を選択してください"),
     E_NOCONTENT("コメントを入力してください。");
