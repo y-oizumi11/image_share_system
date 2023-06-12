@@ -8,7 +8,7 @@ public interface JpaConst {
     int ROW_PER_PAGE = 12; //1ページに表示するレコードの数
 
     //ユーザーテーブル
-    String TABLE_USERS = "users"; //テーブル名
+    String TABLE_USER = "users"; //テーブル名
     //ユーザーテーブルカラム
     String U_COL_ID = "id"; //id
     String U_COL_CODE = "code"; //ユーザー名
@@ -16,6 +16,7 @@ public interface JpaConst {
     String U_COL_PASS = "password"; //パスワード
     String U_COL_ADMIN_FLAG = "admin_flag"; //管理者権限
     String U_COL_DELETE_FLAG = "delete_flag"; //削除フラグ
+    String U_COL_COMMENT = "u_comment"; //ユーザーコメント
 
     int ROLE_ADMIN = 1; //管理者権限ON(管理者)
     int ROLE_GENERAL = 0; //管理者権限OFF(一般)
@@ -33,7 +34,7 @@ public interface JpaConst {
     String IMG_COL_CREATED_AT = "created_at"; //投稿日時
 
     //Entity名
-    String ENTITY_U = "user"; //ユーザー
+    String ENTITY_USER = "user"; //ユーザー
     String ENTITY_IMG = "image"; //画像
 
     //JPQL内パラメータ
@@ -43,17 +44,17 @@ public interface JpaConst {
 
     //NamedQueryの nameとquery
     //全てのユーザーをidの降順に取得する
-    String Q_U_GET_ALL = ENTITY_U + ".getAll"; //name
-    String Q_U_GET_ALL_DEF = "SELECT u FROM User AS u ORDER BY u.id DESC"; //query
+    String Q_U_GET_ALL = ENTITY_USER + ".getAll"; //name
+    String Q_U_GET_ALL_DEF = "SELECT u FROM user AS u ORDER BY u.id DESC"; //query
     //全てのユーザーの件数を取得する
-    String Q_U_COUNT = ENTITY_U + ".count";
-    String Q_U_COUNT_DEF = "SELECT COUNT(u) FROM User AS u";
+    String Q_U_COUNT = ENTITY_USER + ".count";
+    String Q_U_COUNT_DEF = "SELECT COUNT(u) FROM user AS u";
     //ユーザーIDとハッシュ化済パスワードを条件に未削除のユーザーを取得する
-    String Q_U_GET_BY_CODE_AND_PASS = ENTITY_U + ".getByCodeAndPass";
-    String Q_U_GET_BY_CODE_AND_PASS_DEF = "SELECT u FROM User AS u WHERE u.deleteFlag = 0 AND i.code = :" + JPQL_PARM_CODE + " AND u.password = :" + JPQL_PARM_PASSWORD;
+    String Q_U_GET_BY_CODE_AND_PASS = ENTITY_USER + ".getByCodeAndPass";
+    String Q_U_GET_BY_CODE_AND_PASS_DEF = "SELECT u FROM user AS u WHERE u.deleteFlag = 0 AND u.code = :" + JPQL_PARM_CODE + " AND u.password = :" + JPQL_PARM_PASSWORD;
     //指定したユーザーIDを保持するユーザーの件数を取得する
-    String Q_U_COUNT_REGISTERED_BY_CODE = ENTITY_U + ".countRegisteredByCode";
-    String Q_U_COUNT_REGISTERED_BY_CODE_DEF = "SELECT COUNT(u) FROM User AS u WHERE u.code = :" + JPQL_PARM_CODE;
+    String Q_U_COUNT_REGISTERED_BY_CODE = ENTITY_USER + ".countRegisteredByCode";
+    String Q_U_COUNT_REGISTERED_BY_CODE_DEF = "SELECT COUNT(u) FROM user AS u WHERE u.code = :" + JPQL_PARM_CODE;
     //全ての画像をidの降順に取得する
     String Q_IMG_GET_ALL = ENTITY_IMG + ".getAll";
     String Q_IMG_GET_ALL_DEF = "SELECT i FROM Image AS i ORDER BY i.id DESC";
