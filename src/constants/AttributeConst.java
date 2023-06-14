@@ -13,7 +13,7 @@ public enum AttributeConst {
     ERR("errors"),
 
     //ログイン中のユーザー
-    LOGIN_EMP("login_user"),
+    LOGIN_USER("login_user"),
 
     //ログイン画面
     LOGIN_ERR("loginError"),
