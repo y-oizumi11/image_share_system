@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title><c:out value="写真共有システム"></c:out></title>
-<link rel = "stylesheet" href=<c:url value='/css/reset.css'/> />
-<link rel = "stylesheet" href=<c:url value='/css/style.css'/> />
+<link rel = "stylesheet" href="<c:url value='/css/reset.css' />">
+<link rel = "stylesheet" href="<c:url value='/css/style.css' />">
 </head>
 <body>
     <div id="wrapper">

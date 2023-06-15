@@ -16,8 +16,8 @@
       </div>
     </c:if>
 
-  <p>test</p>
+  <h2>投稿画像一覧</h2>
 
-
-    </c:param>
+</c:param>
 </c:import>
+
